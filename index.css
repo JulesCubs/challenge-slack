@@ -1,0 +1,150 @@
+body {
+    margin-top: 15%;
+    background-color: black;
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 40vh;
+    width: 70%;
+    background-color: white;
+    display: grid;
+    grid-template: 20% 60% 20%/10% 18% 10% 12% 40% 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo__img {
+    height: 190px;
+    width: 100px;
+    grid-column: 2 / span 1;
+    grid-row: 2;
+    position: absolute;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    gap: 4px;
+    animation: slack-logo 2s infinite;
+}
+
+@keyframes slack-logo {
+    0% {
+        bottom: -40%;
+        left: 40%;
+    }
+    50% {
+        left: 40%;
+        bottom: 35%;
+        transform: rotate(0deg);
+    }
+    100% {
+        left: 5%;
+        bottom: 35%;
+        transform: rotate(1440deg);
+    }
+}
+
+.dot {
+    width: 40px;
+}
+
+.img {
+    border-radius: 20px;
+}
+
+.azul {
+    background-color: #37c5f0;
+}
+
+.rojo {
+    background-color: #df1b59;
+}
+.amarillo {
+    background-color: #eab02a;
+}
+.verde {
+    background-color: #29b47a;
+}
+
+.i1a {
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 50% 50% 0 50%;
+}
+
+.i1b {
+    height: 90%;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+.i2a {
+    width: 90%;
+    grid-column: 2;
+    grid-row: 3 / span 4;
+}
+
+.i2b {
+    grid-column: 1;
+    grid-row: 3;
+    border-radius: 50% 0 50% 50%;
+}
+
+
+.i3a {
+    grid-column: 4;
+    grid-row: 2;
+    border-radius: 50% 50% 50% 0;
+}
+
+.i3b {
+    width: 90%;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+.i4a {
+    height: 90%;
+    grid-column: 3 / span 4;
+    grid-row: 3;
+}
+
+.i4b {
+    grid-column: 3;
+    grid-row: 4;
+    border-radius: 0 50% 50% 50%;
+}
+
+.logo__letter {
+    padding-top: 40px;
+    grid-column: 4 / span 3;
+    grid-row: 1/span 3;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+}
+
+.logo__letter--cont {
+    height: 100%;
+    margin: 5%;
+    font-size: 10rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    animation-name: slack-letter;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes slack-letter {
+    0% {
+        left:-100%;
+    }
+    100% {
+        left:0%;
+    }
+}
